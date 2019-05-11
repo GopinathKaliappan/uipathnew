@@ -11,3 +11,113 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.padding-20 {
+	padding: 20px;
+}
+.padding-5 {
+	padding: 5px;
+}
+
+.ligin-parent {
+animation: color-me-in 2s;
+	    width: 500px;
+    margin: auto;
+    color: white;
+}
+.ligin-parent select ,input {
+	width: 93%;
+	height: 34px;
+}
+
+.button-parent {
+	text-align: right;
+    padding: 20px;
+}
+.bg-image {
+	
+	    position: absolute;
+    width: 118%;
+    z-index: -1;
+    left: 0;
+}
+
+@keyframes color-me-in {
+  /* You could think of as "step 1" */
+  0% {
+    opacity: 0;
+
+    border-radius: 10px;
+  }
+  /* You could think of as "step 2" */
+  100% {
+  	    background: none;
+   opacity: 1;
+  }
+}
+
+@keyframes curve {
+  /* You could think of as "step 1" */
+  0% {
+    opacity: 0;
+
+    border-radius: 0px;
+  }
+  /* You could think of as "step 2" */
+  100% {
+  	    border-radius: 50px;
+  	    background: none;
+   opacity: 1;
+  }
+}
+
+
+
+.title-header {
+	animation: color-me-in 5s;
+	    background: linear-gradient(#333333, #293f501a);
+    /* background: wheat; */
+    background-image: linear(from left);
+    /*border-bottom: 1px solid #FFEB3B;*/
+    border-bottom: 1px solid lime;
+    margin-top: 30p;
+    color: white;
+    border-bottom-right-radius: 68px;
+}
+
+#title {
+  text-align: center;
+  font-family: arial, sans-serif;
+}
+
+#students {
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border: 3px solid #ddd;
+  width: 100%;
+}
+
+#students td, #students th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#students tr:nth-child(even){
+	background-color: white;
+	color: black;
+}
+
+/*#students tr:hover {background-color: #ddd;}*/
+
+#students th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.mt-20 {
+	margin-top: 20px;
+}
