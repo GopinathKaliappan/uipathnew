@@ -79,15 +79,15 @@ animation: color-me-in 2s;
 
 
 .title-header {
-	animation: color-me-in 5s;
-	    background: linear-gradient(#333333, #293f501a);
+animation: color-me-in 5s;
+    /* background: linear-gradient(#333333, #293f501a); */
     /* background: wheat; */
     background-image: linear(from left);
-    /*border-bottom: 1px solid #FFEB3B;*/
-    border-bottom: 1px solid lime;
+    /* border-bottom: 1px solid #FFEB3B; */
+    border-bottom: 1px solid #e97d75;
     margin-top: 30p;
-    color: white;
-    border-bottom-right-radius: 68px;
+    color: black;
+    /* border-bottom: 68px; */
 }
 
 #title {
@@ -773,7 +773,8 @@ a.filter-links:hover, a.filter-links.active {
 }
 
 .common-action-button {
-	color: #F8735D;
+	background: #F8735D !important;
+	border: #F8735D !important;
 }
 
 /* Change the white to any color ;) */
@@ -789,5 +790,19 @@ input:-webkit-autofill {
 }
 
 .hidden {
-	display: none;
+	display: none !important;
+}
+.black-text {
+	color: black;
+}
+
+.final select, input {
+	    /*width: 295px !important;*/
+    height: 51px;
+/*    border-radius: 11px;
+    border: 2px solid #80808061;*/
+}
+
+.med-width {
+	width: 295px !important;
 }

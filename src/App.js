@@ -56,13 +56,14 @@ class AppRouter extends Component {
   }
   renderTableData() {
     return this.state.list.map((student, index) => {
-      const { state, name, district, email, year } = student //destructuring
+    const { state, name, district, email, year, status } = student //destructuring
       return (
         <tr key={name}>
           <td>{name}</td>
           <td>{state}</td>
           <td>{district}</td>
           <td>{year}</td>
+          <td>{status}</td>
         </tr>
       )
     })
@@ -126,7 +127,7 @@ class AppRouter extends Component {
               <div className="row align-items-center h-100">
                 <div className="col-12 col-sm-6 col-xl-7 bg">
                   <div className="">
-                    <img src={RobotImage} className="img-fluid" />
+                    <img src={RobotImage} className="img-fluid" style={{ width: '100% !important'}} />
       </div>
                   </div>
 
@@ -175,29 +176,29 @@ class AppRouter extends Component {
 
 
               { this.state.list.length < 1  ?
-            <div className={'ligin-parent'}> 
-              <div className={'text-left padding-20 title-header'}><h3>Talk to Robot</h3></div>
+              <div className={'ligin-parent black-text  shadow padding-20 final'}> 
+              <div className={'text-left padding-20 title-header'}><h3>Find me a case</h3></div>
                 <form ref={this.formNew} onSubmit={e => e.preventDefault()}>
               <table>
                 <tbody>
                   <tr>
                     <td className={'padding-20'}>
                       <label>
-                        Company:
+                        Company
           </label>
                     </td >
                     <td className={'padding-20'}>
-                      <input type="text" name="name" required />
+                          <input type="text" className={'form-control login-input med-width'} name="name" required />
                     </td>
                   </tr>
                   <tr>
                     <td className={'padding-20'}>
                       <label>
-                        State:
+                        State
           </label>
                     </td>
                     <td className={'padding-20'}>
-                          <select name="sess_state_code" id="sess_state_code" required>
+                          <select name="sess_state_code" id="sess_state_code" required className={'form-control login-input med-width'}>
                         <option value="28">Andaman and Nicobar</option><option value="2">Andhra Pradesh</option><option value="6">Assam</option><option value="8">Bihar</option><option value="27">Chandigarh</option><option value="18">Chhattisgarh</option><option value="26">Delhi</option><option value="31">Diu and Daman</option><option value="32">DNH at Silvasa</option><option value="30">Goa</option><option value="17">Gujarat</option><option value="14">Haryana</option><option value="5">Himachal Pradesh</option><option value="12">Jammu and Kashmir</option><option value="7">Jharkhand</option><option value="3">Karnataka</option><option value="4">Kerala</option><option value="23">Madhya Pradesh</option><option value="1">Maharashtra</option><option value="25">Manipur</option><option value="21">Meghalaya</option><option value="19">Mizoram</option><option value="11">Orissa</option><option value="22">Punjab</option><option value="9">Rajasthan</option><option value="24">Sikkim</option><option value="10">Tamil Nadu</option><option value="29">Telangana</option><option value="20">Tripura</option><option value="15">Uttarakhand</option><option value="13">Uttar Pradesh</option><option value="16">West Bengal</option>
                       </select>
                     </td>
@@ -206,12 +207,12 @@ class AppRouter extends Component {
                   <tr>
                     <td className={'padding-20'}>
                       <label>
-                        City:
+                        City
           </label>
                     </td>
                     <td className={'padding-20'}>
                       
-                          <select id="sess_dist_code" onchange="fillCourtComplex();" required>
+                          <select id="sess_dist_code" onchange="fillCourtComplex();" required className={'form-control login-input med-width'}>
                          <option value="2">
                            BAGALKOT
                          </option>
@@ -224,11 +225,11 @@ class AppRouter extends Component {
                   <tr>
                     <td className={'padding-20'}>
                       <label>
-                        Year:
+                        Year
           </label>
                     </td>
                     <td className={'padding-20'}>
-                          <select id="sess_year" onchange="fillCourtComplex();" required>
+                          <select id="sess_year" onchange="fillCourtComplex();" required className={'form-control login-input med-width'}>
                         <option value="2015">
                           2015
                         </option>
@@ -250,32 +251,11 @@ class AppRouter extends Component {
                     
                     </td>
                     <td className={'button-parent'}>
-                      <button className={'padding-5 btn btn-primary text-center'}  name="name" onClick={() => { this.validateNew() }}> Send</button>
+                          <button className={'padding-5 btn text-center btn btn-primary login-btn  common-action-button'} name="name" onClick={() => { this.validateNew() }}> Send</button>
                     </td>
                   </tr>
                 </tbody>
               </table>
-
-              <div>
-                    <fieldset>
-                      <legend>Personalia:</legend>
-                      Name: <input type="text" />
-                      Email: <input type="text" />
-                          Date of birth: <input type="text" />
-                    </fieldset>
-              </div>
-                  <fieldset>
-                    <legend>Name</legend>
-
-                    <input type="radio" id="kraken" name="monster" />
-                      <label for="kraken">Kraken</label><br />
-
-                      <input type="radio" id="sasquatch" name="monster" />
-                        <label for="sasquatch">Sasquatch</label><br />
-
-                        <input type="radio" id="mothman" name="monster" />
-                          <label for="mothman">Mothman</label>
-                </fieldset>
               </form> 
             </div> 
               : null            
@@ -312,7 +292,7 @@ class AppRouter extends Component {
                   <ul className="navbar nav p-0 w-100 main-menu">
 
                     <li className="nav-item active w-100">
-                      <a className="nav-link" href="#"><span class="menu-icons focus"></span>Focus</a>
+                      <a className="nav-link" href="#"><span class="menu-icons focus"></span>Judge IT</a>
                       
                       <ul className="list-unstyled sub-menu-first-level">
                         <li className="nav-item  w-100">
@@ -361,11 +341,11 @@ class AppRouter extends Component {
                     </div>
                   <div className="col-4 pr-5">
                     <form className="my-2 my-lg-0">
-                      <input className="form-control mr-sm-2 search-input w-100 list-search" type="search" placeholder="Search with name or ID" aria-label="Search" />
+                      <input className="form-control mr-sm-2 search-input w-100 list-search hidden" type="search" placeholder="Search with name or ID" aria-label="Search" />
           </form>
         </div>
                     <div className="col-4 pr-5 text-right">
-                      <a href="" className="btn btn-new"><span class="add-new"></span> Add New</a>
+                      <button type="button" className="btn btn-primary login-btn mb-35 common-action-button" onClick={() => { this.emptyList() }}>Search</button>
                       </div>
                     </div>
 
@@ -382,7 +362,7 @@ class AppRouter extends Component {
                                 <th scope="col" >State</th>
                                 <th scope="col" >City</th>
                                 <th scope="col" >Year</th>
-                                <th scope="col" >&nbsp;</th>
+                                <th scope="col" >Status</th>
                               </tr>
                             </thead>
                             <tbody>
