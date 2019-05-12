@@ -84,7 +84,7 @@ animation: color-me-in 5s;
     /* background: wheat; */
     background-image: linear(from left);
     /* border-bottom: 1px solid #FFEB3B; */
-    border-bottom: 1px solid #e97d75;
+    /*border-bottom: 1px solid #e97d75;*/
     margin-top: 30p;
     color: black;
     /* border-bottom: 68px; */
@@ -804,5 +804,20 @@ input:-webkit-autofill {
 }
 
 .med-width {
-	width: 295px !important;
+	width: 464px !important;
+}
+.label-div {
+	text-align: left;
+    margin-left: 20px;
+}
+
+.new-label {
+	margin-top: 10px;
+}
+
+.new-width {
+	    width: 464px !important;
+}
+.mt-20 {
+	margin-top: 20px !important;
 }

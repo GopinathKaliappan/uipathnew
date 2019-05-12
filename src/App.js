@@ -135,7 +135,7 @@ class AppRouter extends Component {
                   <div className="login-section-right-inner d-flex w-100 h-100 align-items-center">
                     <form ref={this.form} onSubmit={e => e.preventDefault()}  className=" w-100" action="dashboard.html">
                       <div className="form-group">
-                        <h3 className="brand-logo">Judge It</h3>
+                        <h3 className="brand-logo">Summon ME</h3>
                         </div>
                       <div className="form-group">
                         <h3 className="login-title">Login</h3>
@@ -182,77 +182,77 @@ class AppRouter extends Component {
               <table>
                 <tbody>
                   <tr>
-                    <td className={'padding-20'}>
-                      <label>
-                        Company
-          </label>
-                    </td >
-                    <td className={'padding-20'}>
+
+                    <div className={''}>
+                          <label className={'new-label'}>
+                            Company
+                      </label>
+                    </div>
+                    <div>
+                    
                           <input type="text" className={'form-control login-input med-width'} name="name" required />
-                    </td>
+                    
+                    </div>
                   </tr>
                   <tr>
-                    <td className={'padding-20'}>
-                      <label>
-                        State
-          </label>
-                    </td>
-                    <td className={'padding-20'}>
+
+                        <div className={''}>
+                          <label className={'new-label'}>
+                            State
+                      </label>
+                        </div>
+                        <div>
                           <select name="sess_state_code" id="sess_state_code" required className={'form-control login-input med-width'}>
-                        <option value="28">Andaman and Nicobar</option><option value="2">Andhra Pradesh</option><option value="6">Assam</option><option value="8">Bihar</option><option value="27">Chandigarh</option><option value="18">Chhattisgarh</option><option value="26">Delhi</option><option value="31">Diu and Daman</option><option value="32">DNH at Silvasa</option><option value="30">Goa</option><option value="17">Gujarat</option><option value="14">Haryana</option><option value="5">Himachal Pradesh</option><option value="12">Jammu and Kashmir</option><option value="7">Jharkhand</option><option value="3">Karnataka</option><option value="4">Kerala</option><option value="23">Madhya Pradesh</option><option value="1">Maharashtra</option><option value="25">Manipur</option><option value="21">Meghalaya</option><option value="19">Mizoram</option><option value="11">Orissa</option><option value="22">Punjab</option><option value="9">Rajasthan</option><option value="24">Sikkim</option><option value="10">Tamil Nadu</option><option value="29">Telangana</option><option value="20">Tripura</option><option value="15">Uttarakhand</option><option value="13">Uttar Pradesh</option><option value="16">West Bengal</option>
-                      </select>
-                    </td>
+                            <option value="28">Andaman and Nicobar</option><option value="2">Andhra Pradesh</option><option value="6">Assam</option><option value="8">Bihar</option><option value="27">Chandigarh</option><option value="18">Chhattisgarh</option><option value="26">Delhi</option><option value="31">Diu and Daman</option><option value="32">DNH at Silvasa</option><option value="30">Goa</option><option value="17">Gujarat</option><option value="14">Haryana</option><option value="5">Himachal Pradesh</option><option value="12">Jammu and Kashmir</option><option value="7">Jharkhand</option><option value="3">Karnataka</option><option value="4">Kerala</option><option value="23">Madhya Pradesh</option><option value="1">Maharashtra</option><option value="25">Manipur</option><option value="21">Meghalaya</option><option value="19">Mizoram</option><option value="11">Orissa</option><option value="22">Punjab</option><option value="9">Rajasthan</option><option value="24">Sikkim</option><option value="10">Tamil Nadu</option><option value="29">Telangana</option><option value="20">Tripura</option><option value="15">Uttarakhand</option><option value="13">Uttar Pradesh</option><option value="16">West Bengal</option>
+                          </select>
+                        </div>
+
+                    </tr>
+                    <tr>    
+                        <div className={''}>
+                          <label className={'new-label'}>
+                            City
+                      </label>
+                        </div>
+                        <div>
+                          <select id="sess_dist_code" onchange="fillCourtComplex();" required className={'form-control login-input med-width'}>
+                            <option value="2">
+                              BAGALKOT
+                         </option>
+                            <option value="12">
+                              BALLARI
+                          </option><option value="1">BELAGAVI</option><option value="20">BENGALURU</option><option value="21">BENGALURU RURAL</option><option value="5">BIDAR</option><option value="27">CHAMRAJNAGAR</option><option value="29">CHIKKABALLAPUR</option><option value="17">CHIKKAMAGALURU</option><option value="13">CHITRADURGA</option><option value="24">DAKSHINA KANNADA</option><option value="14">DAVANGERE</option><option value="9">DHARWAD</option><option value="8">GADAG</option><option value="23">HASSAN</option><option value="11">HAVERI</option><option value="4">KALABURAGI</option><option value="25">KODAGU</option><option value="19">KOLAR</option><option value="7">KOPPAL</option><option value="22">MANDYA</option><option value="26">MYSURU</option><option value="6">RAICHUR</option><option value="28">RAMANAGARAM</option><option value="15">SHIVAMOGGA</option><option value="18">TUMAKURU</option><option value="16">UDUPI</option><option value="10">UTTARA KANNADA</option><option value="3">VIJAYAPURA</option><option value="30">YADGIR.</option></select> 
+                        </div>
                   </tr>
                   
                   <tr>
-                    <td className={'padding-20'}>
-                      <label>
-                        City
-          </label>
-                    </td>
-                    <td className={'padding-20'}>
-                      
-                          <select id="sess_dist_code" onchange="fillCourtComplex();" required className={'form-control login-input med-width'}>
-                         <option value="2">
-                           BAGALKOT
-                         </option>
-                         <option value="12">
-                           BALLARI
-                          </option><option value="1">BELAGAVI</option><option value="20">BENGALURU</option><option value="21">BENGALURU RURAL</option><option value="5">BIDAR</option><option value="27">CHAMRAJNAGAR</option><option value="29">CHIKKABALLAPUR</option><option value="17">CHIKKAMAGALURU</option><option value="13">CHITRADURGA</option><option value="24">DAKSHINA KANNADA</option><option value="14">DAVANGERE</option><option value="9">DHARWAD</option><option value="8">GADAG</option><option value="23">HASSAN</option><option value="11">HAVERI</option><option value="4">KALABURAGI</option><option value="25">KODAGU</option><option value="19">KOLAR</option><option value="7">KOPPAL</option><option value="22">MANDYA</option><option value="26">MYSURU</option><option value="6">RAICHUR</option><option value="28">RAMANAGARAM</option><option value="15">SHIVAMOGGA</option><option value="18">TUMAKURU</option><option value="16">UDUPI</option><option value="10">UTTARA KANNADA</option><option value="3">VIJAYAPURA</option><option value="30">YADGIR.</option></select> 
-                    </td>
-                  </tr>
-                
-                  <tr>
-                    <td className={'padding-20'}>
-                      <label>
-                        Year
-          </label>
-                    </td>
-                    <td className={'padding-20'}>
+
+                        <div className={''}>
+                          <label className={'new-label'}>
+                            Year
+                      </label>
+                        </div>
+                        <div>
                           <select id="sess_year" onchange="fillCourtComplex();" required className={'form-control login-input med-width'}>
-                        <option value="2015">
-                          2015
+                            <option value="2015">
+                              2015
                         </option>
-                        <option value="2016">
-                          2016
+                            <option value="2016">
+                              2016
                          </option>
-                        <option value="2017">
-                          2017
+                            <option value="2017">
+                              2017
                          </option>
-                        <option value="2018">
-                          2018
+                            <option value="2018">
+                              2018
                          </option>
-                        </select> 
-                    </td>
+                          </select> 
+                        </div>
                   </tr>
                   <tr className={'padding-20'}>
                     
-                    <td>
+                        <button className={'padding-5 btn text-center btn btn-primary login-btn  common-action-button mt-20'} name="name" onClick={() => { this.validateNew() }}> Send</button>
                     
-                    </td>
-                    <td className={'button-parent'}>
-                          <button className={'padding-5 btn text-center btn btn-primary login-btn  common-action-button'} name="name" onClick={() => { this.validateNew() }}> Send</button>
-                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -292,7 +292,7 @@ class AppRouter extends Component {
                   <ul className="navbar nav p-0 w-100 main-menu">
 
                     <li className="nav-item active w-100">
-                      <a className="nav-link" href="#"><span class="menu-icons focus"></span>Judge IT</a>
+                      <a className="nav-link" href="#"><span class="menu-icons focus"></span>Summon ME</a>
                       
                       <ul className="list-unstyled sub-menu-first-level">
                         <li className="nav-item  w-100">
@@ -325,7 +325,7 @@ class AppRouter extends Component {
                     </a>
                     </li>
                       <li className="nav-item">
-                    <button type="button" className="btn btn-primary login-btn mb-35 common-action-button" onClick={() => { this.emptyList() }}>Search</button>
+                    <button type="button" className="btn btn-primary login-btn mb-35 common-action-button hidden" onClick={() => { this.emptyList() }}>Search</button>
             </li>
                       <li className="nav-item">
                     <a className="hidden" href="#" title="Logout"><img src="assets/images/profile@2x.png" alt="Logout" /></a>
